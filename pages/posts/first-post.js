@@ -1,17 +1,20 @@
-import Link from 'next/link';
 import YourComponent from '../images/Images';
-
+import Head from 'next/head';
+import Link from 'next/link';
+import Layout from '../../components/layout';
 
 export default function FirstPost() {
-    return(
-        <>
-        <h1>First Post</h1>
-        <h2>
-            back to  <Link href="/">home</Link>
-        </h2>
-        {/* <img src="/images/profile.jpg" alt="Your Name" /> */}
-        <YourComponent />
-        </>
-    ) 
-  }
-  
+  return (
+    <Layout>
+      <Head>
+        <title>First Post</title>
+      </Head>
+      <h1>First Post</h1>
+      <YourComponent/>
+      <h2>
+        <Link href="/">← Back to home</Link>
+        
+      </h2>
+    </Layout>
+  );
+}
